@@ -1,0 +1,2 @@
+import { requireUser } from "@/lib/auth-helpers";import { prisma } from "@/lib/prisma";import { SettingsForm } from "@/components/dashboard/settings-form";
+export default async function Settings(){const u=await requireUser();const user=await prisma.user.findUnique({where:{id:u.id}});if(!user)return null;return <div><p className="text-sm font-bold text-indigo-600">Workspace</p><h1 className="mt-1 text-3xl font-black">Settings</h1><p className="mb-6 mt-2 text-sm text-slate-500">Manage your profile, business identity and appearance.</p><SettingsForm user={user}/></div>}

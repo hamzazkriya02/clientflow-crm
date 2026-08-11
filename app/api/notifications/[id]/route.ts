@@ -1,0 +1,2 @@
+import { NextResponse } from "next/server";import { auth } from "@/auth";import { prisma } from "@/lib/prisma";
+export async function PATCH(_:Request,{params}:{params:Promise<{id:string}>}){const s=await auth();if(!s?.user?.id)return NextResponse.json({error:"Unauthorized"},{status:401});const{id}=await params;const n=await prisma.notification.findFirst({where:{id,userId:s.user.id}});if(!n)return NextResponse.json({error:"Not found"},{status:404});await prisma.notification.update({where:{id},data:{read:true}});return NextResponse.json({ok:true})}

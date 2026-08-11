@@ -1,0 +1,10 @@
+"use client";
+import Link from "next/link";
+import { Search } from "lucide-react";
+import { useEffect,useState } from "react";
+type R={id:string;type:string;title:string;subtitle?:string;href:string};
+export function GlobalSearch(){
+ const[q,setQ]=useState("");const[r,setR]=useState<R[]>([]);const[busy,setBusy]=useState(false);
+ useEffect(()=>{if(q.trim().length<2){setR([]);return}const t=setTimeout(async()=>{setBusy(true);try{const res=await fetch(`/api/search?q=${encodeURIComponent(q)}`);const j=await res.json();setR(j.results||[])}catch{setR([])}finally{setBusy(false)}},250);return()=>clearTimeout(t)},[q]);
+ return <div className="relative w-full max-w-3xl"><div className="relative"><Search size={18} className="pointer-events-none absolute left-4 top-1/2 z-10 -translate-y-1/2 text-slate-400"/><input type="search" value={q} onChange={e=>setQ(e.target.value)} style={{paddingLeft:"46px"}} className="block h-11 w-full rounded-xl border border-slate-200 bg-white pr-4 text-sm text-slate-900 outline-none transition placeholder:text-slate-400 focus:border-indigo-500 focus:ring-4 focus:ring-indigo-500/10 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-100" placeholder="Search clients, leads, projects, tasks, invoices..."/></div>{q.trim().length>=2&&<div className="absolute left-0 right-0 top-[52px] z-50 overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900"><div className="px-4 py-2.5 text-xs font-bold text-slate-400">{busy?"Searching...":`${r.length} results`}</div>{!busy&&r.map(x=><Link onClick={()=>setQ("")} href={x.href} key={`${x.type}-${x.id}`} className="flex items-center justify-between border-t border-slate-100 px-4 py-3 hover:bg-slate-50 dark:border-slate-800 dark:hover:bg-slate-800"><div><p className="text-sm font-bold">{x.title}</p>{x.subtitle&&<p className="text-xs text-slate-500">{x.subtitle}</p>}</div><span className="badge bg-indigo-50 text-indigo-700">{x.type}</span></Link>)}{!busy&&!r.length&&<p className="border-t border-slate-100 px-4 py-5 text-sm text-slate-500 dark:border-slate-800">No matching records.</p>}</div>}</div>
+}

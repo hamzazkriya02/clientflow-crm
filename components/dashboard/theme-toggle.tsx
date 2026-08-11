@@ -1,0 +1,3 @@
+﻿"use client"; import { Moon,Sun } from "lucide-react"; import { useEffect,useState } from "react";
+export function ThemeToggle(){const[d,setD]=useState(false);useEffect(()=>{const v=localStorage.getItem("cf-theme")==="dark";setD(v);document.documentElement.classList.toggle("dark",v)},[]);function toggle(){const n=!d;setD(n);localStorage.setItem("cf-theme",n?"dark":"light");document.documentElement.classList.toggle("dark",n)}return <button onClick={toggle} className="grid h-10 w-10 place-items-center rounded-xl border border-slate-200 bg-white text-slate-600 transition hover:bg-slate-50 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-200 dark:hover:bg-slate-800" aria-label="Toggle theme">{d?<Sun size={18}/>:<Moon size={18}/>}</button>}
+

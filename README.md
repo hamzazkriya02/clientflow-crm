@@ -1,223 +1,534 @@
-# ClientFlow
+# 🚀 ClientFlow 
 
-**ClientFlow** is a portfolio-quality full-stack SaaS CRM and client management platform for freelancers, agencies, consultants, and small service businesses. It combines sales, client relationships, project delivery, task management, invoicing, notifications, and analytics in one modern workspace.
+A modern, full-stack **CRM & Client Management Platform** built for freelancers, agencies, developers, and service-based businesses.
 
-![ClientFlow Dashboard](./public/clientflow-preview.svg)
+ClientFlow HQ helps manage the complete client journey — from capturing leads and converting them into clients to managing projects, tasks, invoices, notifications, and business analytics — all from one centralized workspace.
 
-## Why this project stands out
+---
 
-ClientFlow is intentionally structured like a real SaaS product rather than a static dashboard template. Authenticated users get isolated CRM data, PostgreSQL-backed CRUD workflows, connected relational records, a draggable sales pipeline, invoice PDF export, responsive analytics, automatic deadline notifications, polished loading/empty/error states, and a production-style landing/auth experience.
+## 🌐 Live Demo
 
-## Features
+**Live Application:**  
+https://clientflowhq.vercel.app
 
-- Premium responsive SaaS landing page and authentication experience
-- Credentials authentication with Auth.js / NextAuth
-- Protected dashboard routes and per-user data isolation
-- Client CRUD, search, filters, and detailed client profiles
-- Kanban lead pipeline with drag-and-drop stage changes
-- Won lead → client conversion workflow
-- Project management with clients, budgets, progress, statuses, and deadlines
-- Task management with project, priority, status, deadline filters and quick completion
-- Professional itemized invoices with tax, discounts, totals, status tracking, print view, and PDF download
-- Dashboard KPIs backed by real database aggregates
-- Revenue, client-growth, project-status, funnel, conversion, and invoice analytics
-- Global search across clients, leads, projects, tasks, and invoices
-- Notification inbox with unread badge and mark-read controls
-- Automatic overdue invoice, upcoming project deadline, and due-task notifications
-- Profile and business settings used on invoices
-- Light / dark appearance toggle
-- Professional seed data and recruiter-friendly demo account
+**GitHub Repository:**  
+https://github.com/hamzazkriya02/clientflow-crm
 
-## Tech Stack
+---
 
-- **Next.js 16** — App Router, React Server Components, route handlers, server actions
-- **React 19 + TypeScript**
-- **Tailwind CSS 4**
-- **PostgreSQL**
-- **Prisma ORM 7** with `@prisma/adapter-pg`
-- **Auth.js / NextAuth 5** credentials authentication
-- **Recharts**
-- **Lucide React**
-- **jsPDF**
-- **Zod**
+## ✨ Features
 
-## Demo credentials
+### 📊 Dashboard
 
-After seeding the database:
+- Business overview
+- Revenue statistics
+- Sales pipeline statistics
+- Client overview
+- Project statistics
+- Task overview
+- Recent activities
+- Quick access to CRM modules
+
+### 👥 Client Management
+
+- Add new clients
+- View client profiles
+- Search clients
+- Filter client records
+- Store company information
+- Store email and phone details
+- Store country and address
+- Client status management
+- Delete client records
+- Connect clients with projects and invoices
+
+### 🎯 Lead Management
+
+Kanban-style sales pipeline with stages:
+
+- New
+- Contacted
+- Qualified
+- Proposal
+- Negotiation
+- Won
+- Lost
+
+Additional functionality:
+
+- Create leads
+- Delete leads
+- Drag & drop leads between stages
+- Track estimated deal value
+- Track lead source
+- Set follow-up dates
+- Add lead notes
+- Convert Won leads directly into clients
+- Calculate total pipeline value
+
+### 📁 Project Management
+
+- Create projects
+- Assign projects to clients
+- Internal projects
+- Project budgets
+- Start dates
+- Deadlines
+- Project descriptions
+- Project status management
+- Progress tracking
+- Search projects
+- Edit projects
+- Delete projects
+- Deadline indicators
+
+Project statuses include:
+
+- Planning
+- In Progress
+- Review
+- Completed
+- On Hold
+
+### ✅ Task Management
+
+- Create tasks
+- Project-linked tasks
+- General tasks
+- Task descriptions
+- Due dates
+- Priority levels
+- Status management
+- Search tasks
+- Filter by project
+- Filter by status
+- Filter by priority
+- Mark tasks completed
+- Delete tasks
+- Overdue task tracking
+
+Priority levels:
+
+- Low
+- Medium
+- High
+- Urgent
+
+### 🧾 Invoice Management
+
+- Create professional invoices
+- Assign invoices to clients
+- Multiple invoice line items
+- Quantity management
+- Unit pricing
+- Automatic subtotal calculation
+- Tax calculation
+- Discount support
+- Total calculation
+- Due dates
+- Invoice notes
+- Invoice status management
+- Print invoices
+- Download invoices as PDF
+- Business details on invoices
+
+Invoice statuses:
+
+- Draft
+- Sent
+- Paid
+- Overdue
+- Cancelled
+
+### 📈 Analytics
+
+Business analytics dashboard including:
+
+- Paid revenue
+- Pipeline value
+- Lead conversion rate
+- Project completion rate
+- Revenue trends
+- New client trends
+- Invoice status overview
+- Sales funnel visualization
+- Business performance statistics
+
+### 🔔 Notifications
+
+- Activity notifications
+- Unread notification counter
+- Notification badge
+- Mark individual notifications as read
+- Mark all notifications as read
+- Links to related CRM records
+- Dark-mode optimized notification UI
+
+### ⚙️ Settings
+
+#### Profile
+
+- Update full name
+- Update email
+- Update phone
+- Profile image URL
+- Instant UI updates after saving
+
+#### Business
+
+- Business name
+- Business email
+- Business phone
+- Business website
+- Business address
+- Business logo
+- Invoice business information
+
+#### Appearance
+
+- Light Mode
+- Dark Mode
+- Persistent theme preference
+
+---
+
+## 🌙 Dark Mode
+
+ClientFlow HQ includes a fully designed dark interface.
+
+The dark theme covers:
+
+- Dashboard
+- Navigation
+- Search
+- Clients
+- Leads
+- Projects
+- Tasks
+- Invoices
+- Analytics
+- Notifications
+- Settings
+
+Theme preference is stored locally in the browser and persists between sessions.
+
+---
+
+## 📱 Responsive Design
+
+ClientFlow HQ is fully responsive and tested across:
+
+- Desktop
+- Laptop
+- Tablet
+- Mobile devices
+
+The application includes responsive navigation, cards, tables, forms, modals, and dashboard layouts.
+
+---
+
+## 🛠️ Tech Stack
+
+### Frontend
+
+- Next.js 16
+- React
+- TypeScript
+- Tailwind CSS
+- Lucide React
+
+### Backend
+
+- Next.js Route Handlers
+- Prisma ORM
+
+### Database
+
+- PostgreSQL
+- Neon
+
+### Authentication
+
+- Auth.js / NextAuth
+
+### Deployment
+
+- Vercel
+
+### Development Tools
+
+- Git
+- GitHub
+- npm
+- VS Code
+
+---
+
+## 🔄 CRM Workflow
 
 ```text
-Email: hamzahoon02@gmail.com
-Password: hamza1122
+Lead
+  ↓
+Sales Pipeline
+  ↓
+Won Lead
+  ↓
+Convert to Client
+  ↓
+Client
+  ↓
+Project
+  ↓
+Tasks
+  ↓
+Invoice
+  ↓
+Payment
+  ↓
+Revenue & Analytics
 ```
 
-## Installation
+---
 
-### 1. Install Node.js
+## 📂 Project Structure
 
-Use Node.js 20 or newer. Node.js 22 LTS is a good choice.
+```text
+ClientFlow/
+│
+├── app/
+│   ├── api/
+│   ├── dashboard/
+│   ├── login/
+│   ├── globals.css
+│   ├── layout.tsx
+│   └── page.tsx
+│
+├── components/
+│   └── dashboard/
+│
+├── lib/
+│   ├── activity.ts
+│   ├── prisma.ts
+│   └── utils.ts
+│
+├── prisma/
+│   ├── schema.prisma
+│   ├── migrations/
+│   └── seed.ts
+│
+├── generated/
+├── public/
+│
+├── auth.ts
+├── prisma.config.ts
+├── package.json
+├── .gitignore
+└── README.md
+```
 
-### 2. Install dependencies
+---
+
+## 💻 Local Development
+
+### 1. Clone Repository
+
+```bash
+git clone https://github.com/hamzazkriya02/clientflow-crm.git
+```
+
+### 2. Open Project
+
+```bash
+cd clientflow-crm
+```
+
+### 3. Install Dependencies
 
 ```bash
 npm install
 ```
 
-### 3. Configure environment variables
+### 4. Configure Environment Variables
 
-Copy `.env.example` to `.env`:
-
-```bash
-cp .env.example .env
-```
-
-On Windows PowerShell:
-
-```powershell
-Copy-Item .env.example .env
-```
-
-Generate a strong Auth.js secret:
-
-```bash
-npx auth secret
-```
-
-Then make sure `.env` contains:
+Create a `.env` file in the project root:
 
 ```env
-DATABASE_URL="postgresql://postgres:postgres@localhost:5432/clientflow"
-AUTH_SECRET="your-generated-secret"
+DATABASE_URL="your_postgresql_connection_string"
+AUTH_SECRET="your_auth_secret"
 AUTH_TRUST_HOST="true"
 NEXT_PUBLIC_APP_URL="http://localhost:3000"
 ```
 
-## Database Setup
+> ⚠️ Never commit your real `.env` file, database password, or authentication secrets to GitHub.
 
-### Option A — Local PostgreSQL with Docker
-
-If Docker Desktop is installed:
-
-```bash
-docker compose up -d
-```
-
-This starts PostgreSQL on port `5432` with the credentials already shown in `.env.example`.
-
-### Option B — Existing / hosted PostgreSQL
-
-Use any PostgreSQL provider such as Neon, Supabase, Railway, Prisma Postgres, or another managed provider. Replace `DATABASE_URL` with its PostgreSQL connection string.
-
-## Prisma migration
+### 5. Generate Prisma Client
 
 ```bash
 npx prisma generate
-npx prisma migrate dev --name init
 ```
 
-## Seed demo data
-
-```bash
-npm run db:seed
-```
-
-The seed creates realistic clients, leads, projects, tasks, invoices, notifications, activity, and the demo account shown above.
-
-## Running locally
-
-```bash
-npm run dev
-```
-
-Open `http://localhost:3000`.
-
-## Type / source check
-
-```bash
-npm run check
-```
-
-The build script also regenerates Prisma Client automatically:
-
-```bash
-npm run build
-```
-
-## Production deployment on Vercel
-
-1. Push this project to GitHub.
-2. Import the repository into Vercel.
-3. Create or connect a hosted PostgreSQL database.
-4. Add `DATABASE_URL`, `AUTH_SECRET`, and `AUTH_TRUST_HOST=true` in Vercel → Project Settings → Environment Variables.
-5. Set `NEXT_PUBLIC_APP_URL` to your production URL if you use it in custom integrations.
-6. Run your production migration against the hosted database:
+### 6. Apply Database Migrations
 
 ```bash
 npx prisma migrate deploy
 ```
 
-7. Optionally seed the production/demo database:
+### 7. Run Development Server
 
 ```bash
-npm run db:seed
+npm run dev
 ```
 
-8. Deploy. Vercel will run `npm run build`.
-
-> For production teams, run `prisma migrate deploy` in CI/CD rather than running development migrations in production.
-
-## Project Structure
+Open the application at:
 
 ```text
-ClientFlow/
-├── app/
-│   ├── api/                 # Auth + CRUD + search/settings endpoints
-│   ├── dashboard/           # Protected CRM application routes
-│   ├── login/               # Authentication
-│   ├── register/
-│   └── page.tsx             # Public SaaS landing page
-├── components/
-│   └── dashboard/           # Reusable dashboard UI + managers
-├── generated/               # Generated by `prisma generate` (gitignored)
-├── lib/                     # Prisma, auth helpers, activity and notification logic
-├── prisma/
-│   ├── schema.prisma        # Relational PostgreSQL schema
-│   └── seed.ts              # Professional demo dataset
-├── public/
-├── types/
-├── .env.example
-├── prisma.config.ts
-└── package.json
+http://localhost:3000
 ```
 
-## Data security model
+---
 
-Every CRM-owned table stores a `userId`, and API/database queries scope records to the authenticated user's ID before read/write/delete operations. This prevents one logged-in user from reading or mutating another user's ClientFlow workspace through normal application routes.
+## 🏗️ Production Build
 
-## Demo-only / intentionally incomplete features
+Create a production build:
 
-Two items are intentionally not connected to external paid infrastructure in this portfolio release:
+```bash
+npm run build
+```
 
-1. **Forgot-password email delivery** — the reset UI is included, but sending real reset links requires an email provider such as Resend or Postmark plus token storage/expiry logic.
-2. **SaaS subscription payments** — Starter, Professional, and Agency pricing are marketing/demo plans only, matching the project brief. Stripe billing is a logical future improvement.
+Start the production application:
 
-All primary CRM data workflows—authentication, database records, client/lead/project/task/invoice relationships, CRUD operations, search, dashboard data, analytics, notification reads, and invoice PDF generation—are implemented as working application features.
+```bash
+npm start
+```
 
-## Future Improvements
+---
 
-- OAuth providers (Google / GitHub)
-- Password-reset tokens + transactional email
-- Stripe subscriptions and account-level plans
-- Multi-user organizations, invitations, and roles
-- File attachments and object storage
+## 🔐 Environment Variables
+
+| Variable | Purpose |
+|---|---|
+| `DATABASE_URL` | PostgreSQL / Neon database connection |
+| `AUTH_SECRET` | Authentication signing secret |
+| `AUTH_TRUST_HOST` | Enables trusted deployment host |
+| `NEXT_PUBLIC_APP_URL` | Application base URL |
+
+Production application URL:
+
+```env
+NEXT_PUBLIC_APP_URL="https://clientflowhq.vercel.app"
+```
+
+---
+
+## 📸 Screenshots
+
+### Dashboard
+
+_Add ClientFlow dashboard screenshot here._
+
+### Lead Pipeline
+
+_Add Kanban lead pipeline screenshot here._
+
+### Client Management
+
+_Add client management screenshot here._
+
+### Projects
+
+_Add project management screenshot here._
+
+### Tasks
+
+_Add task management screenshot here._
+
+### Invoices
+
+_Add invoice screenshot here._
+
+### Analytics
+
+_Add analytics dashboard screenshot here._
+
+### Dark Mode
+
+_Add dark mode screenshot here._
+
+---
+
+## 🔒 Security
+
+ClientFlow HQ includes:
+
+- Authentication-protected dashboard
+- User-scoped CRM records
+- Server-side database operations
+- Environment-based secrets
+- `.env` excluded from Git
+- PostgreSQL production database
+- Secure Vercel environment configuration
+
+Sensitive information such as database credentials and authentication secrets should never be committed to the repository.
+
+---
+
+## 🚀 Deployment
+
+The production application is deployed using **Vercel** with a **Neon PostgreSQL** database.
+
+Production URL:
+
+https://clientflowhq.vercel.app
+
+GitHub pushes to the production branch can be used to deploy future updates.
+
+---
+
+## 🗺️ Future Improvements
+
+Potential future additions:
+
+- Team workspaces
+- Multiple team members
+- Role-based access control
 - Email invoice delivery
-- Recurring invoices and payment links
-- Webhook / audit-log integrations
-- Calendar sync
-- CSV import/export
-- Automated tests and CI pipeline
+- File attachments
+- Recurring invoices
+- Online payment integration
+- Calendar integration
+- Advanced reporting
+- Data export
+- Custom sales pipelines
+- Automated client reminders
+- Email notifications
+- Activity exports
 
-## Author
+---
 
-Built as a full-stack SaaS portfolio project designed to demonstrate modern product UI, database architecture, authentication, relational CRUD, analytics, and production-minded Next.js engineering.
+## 👨‍💻 Author
 
-If you use ClientFlow in your portfolio, replace this section with your name, GitHub profile, LinkedIn profile, and live demo URL.
+### Muhammad Hamza
+
+**Full-Stack Developer**
+
+GitHub:  
+https://github.com/hamzazkriya02
+
+Live Project:  
+https://clientflowhq.vercel.app
+
+---
+
+## ⭐ Support
+
+If you find ClientFlow HQ useful or interesting, consider giving the repository a **star ⭐**.
+
+---
+
+## 📄 License
+
+This project was created for portfolio, learning, demonstration, and development purposes.
+
+---
+
+**Built with Next.js, TypeScript, Prisma, PostgreSQL and Vercel.**
